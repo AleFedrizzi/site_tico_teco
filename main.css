@@ -1,0 +1,422 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
+
+:root{
+    --primary-color: #007AF3;
+}
+*{
+    text-decoration: none;
+}
+
+body{
+    background: #f2f2f2;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*Navbar*/
+.navbar{
+    background: white;
+    padding: 1em;
+
+}
+
+.logo{
+    font-weight: 700;
+    color: black;
+    font-size: 1.2em;
+}
+
+.logo span{
+    color: var(--primary-color);
+}
+
+
+nav{
+    display: none;
+}
+
+.navbar .container{
+    display: flex;
+    place-content: space-between;
+}
+
+.mobile-menu{
+    cursor: pointer;
+}
+
+a{
+    color: #444444;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+section{
+    padding: 5em 2em;
+}
+
+.hero{
+    text-align: center;
+}
+
+.subhead {
+    text-transform: uppercase;
+    font-weight: 500;
+    color: gray;
+    letter-spacing: .3em;
+}
+
+h1{
+    font-size: 2.5em;
+    line-height: 1.3em;
+    margin-top: .2em;
+}
+
+.primary-cta{
+    background: var(--primary-color);
+    color: white;
+    padding: .6em 1.3em;
+    font-size: 1.4em;
+    border-radius: 5em;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.watch-video-cta{
+    display: block;
+    margin-top: 1rem;
+}
+
+img{
+    margin-right: .5em;
+}
+
+.hero-img{
+    width: 70%;
+    margin-top: 3em;
+}
+
+section.secao-recursos{
+    background: #20272e;
+    color: white;
+}
+
+ul .lista-recursos{
+    margin: 0;
+    padding-left: .1em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, ninmax(19rem, 1fr));
+
+}
+
+.secao-recursos li{
+    font-size: 1.1em;
+    margin-left: 2em;
+    margin-bottom: 1em;
+    font-weight: 200;
+    position: relative;
+}
+
+.secao-recursos li::before{
+    content: "";
+    left: -2em;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: url("images/bullet.svg");
+    background-size: contain;
+}
+
+.secao-recursos img{
+    display: none;
+}
+
+section.sessao-depoimento{
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.sessao-depoimento li{
+    background: #006bd6;
+    text-align: center;
+    padding: 2em 1em;
+    width: 80%;
+    margin: 0 auto 5em auto;
+    border-radius: 1em;
+}
+
+.sessao-depoimento img{
+    width: 5em;
+    height: 5em;
+    border: 5px solid #006bd6;
+    border-radius: 50%;
+    margin-top: -4.5em;
+}
+
+.sessao-contato h2{
+    font-size: 2em;
+}
+
+.sessao-contato label{
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: .5em;
+    
+}
+
+.sessao-contato input, textarea{
+    width: 100%;
+    padding: .8em;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 1em;
+    border-radius: .3em;
+    border: .5px solid grey;
+    box-sizing: border-box;
+}
+
+input[type="submit"]{
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 500;
+    font-size: 1.2em;
+    border: none;
+    margin-bottom: 5em;
+    border-radius: 5em;
+    display: inline-block;
+    padding: .8em 2em;
+    width: unset;
+    cursor: pointer;
+}
+
+iframe{
+    width: 100%;
+    height: 300px;
+}
+
+nav.menu-btn{
+    display: block;
+}
+
+nav{
+    position: fixed;
+    z-index: 999;
+    width: 66%;
+    right: 0;
+    top: 0;
+    background-color: #20272e;
+    height: 100vh;
+    padding: 1em;
+
+}
+
+nav .primary-nav{
+    margin-top: 6em;
+
+}
+
+nav li a{
+    color: white;
+    display: block;
+    padding: .5em;
+    font-size: 1.3em;
+    font-weight: 300;
+    text-align: right;
+}
+
+nav li a:hover{
+    color: #007AF3;
+}
+
+.mobile-menu-fecha{
+    float: right;
+    margin: .5em;
+    margin-top: .5em;
+}
+
+@media only screen and (min-width: 768px){
+    .mobile-menu, .mobile-menu-fecha{
+        display: none;
+    }
+
+    .navbar .container{
+        display: grid;
+        grid-template-columns: 180px auto;
+        justify-content: unset;
+    }
+
+    .navbar nav{
+        display: flex;
+        justify-content: space-between;
+        background: none;
+        position: unset;
+        height: auto;
+        width: 100%;
+        padding: 0;
+    }
+
+    ul{
+        display: flex;
+    }
+
+    nav li a{
+        color: black;
+        font-size: 1em;
+        padding: .1em 1em;
+        font-weight: 500;
+        margin-left: 1em;
+    }
+
+    ul.primary-nav{
+        margin: 0;
+    }
+
+    li.current a{
+        font-weight: 500;
+    }
+
+    li.seja-premio a{
+        color: var(--primary-color);
+        font-weight: 500;
+        border: 2px solid var(--primary-color);
+        border-radius: 15px;
+        margin-top: -.2em;
+        margin-right: 1em;
+    }
+
+    li.seja-premio a:hover{
+        background: var(--primary-color);
+        color: white;
+    }
+}
+
+@media only screen and (min-width: 1080px){
+    .container{
+        width: 1080px;
+        margin: 0 auto;
+    }
+
+    section{
+        padding: 10em 4em;
+    }
+
+    .hero .container{
+        display: flex;
+        justify-content: center;
+        text-align: left;
+    }
+
+    .col-direita{
+        margin: 3em 3em 0 5em;
+    }
+
+    h1{
+        font-size: 3em;
+        width: 90%;
+    }
+
+    .hero-img{
+        width: 35%;
+        margin-right: 8em;
+    }
+
+    .hero-cta{
+        display: flex;
+    }
+
+    .primary-cta{
+        margin-right: 1em;
+    }
+
+    ul.lista-recursos{
+        display: block;
+        margin-left: 5em;
+    }
+
+    .secao-recursos li{
+        font-size: 1.1em;
+    }
+
+    .secao-recursos li::before{
+        width: 22px;
+        height: 22px;
+    }
+
+    .secao-recursos{
+        position: relative;
+    }
+
+    .secao-recursos img{
+        display: block;
+        position: absolute;
+        right: 2em;
+        width: 350px;
+        bottom: -5em;
+        transform: rotate(180deg);
+    }
+
+    .sessao-depoimento ul{
+        display: flex;
+    }
+
+    .sessao-depoimento li{
+        margin: 0 1em;
+    }
+
+    .sessao-contato{
+        position: relative;
+    }
+
+    .sessao-contato .container{
+        display: flex;
+    }
+
+    .contato-esquerda{
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 45%;
+        height: 100%;
+    }
+
+    iframe{
+        height: 100%;
+    }
+}
+
+@media only screen and (min-width: 1240px){
+
+    .secao-recursos{
+        padding: 6em;
+    }
+
+    .secao-recursos::before{
+        content: "";
+        position: absolute;
+        width: 10%;
+        height: 20em;
+        background: var(--primary-color);
+        left: 0;
+        top: -4em;
+    }
+
+    .secao-recursos::after{
+        content: "";
+        position: absolute;
+        width: 200px;
+        height: 20em;
+        background: url("images/dots.svg") no-repeat;
+        left: 2.5em;
+        top: 4.5em;
+    }
+
+    ul.lista-recursos{
+        margin-left: 15em;
+    }
+
+    .lista-recursos li{
+        margin-bottom: 2em;
+    }
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>2021 Front End</title>
+
+</head>
+<body>
+    <div class="navbar">
+        <div class="container">
+            <a class="logo" href="#">Ale<span>Fedrizzi</span></a>
+
+            <img id="mobile-cta" class="mobile-menu" src="images/menu.svg" alt="Abra o menu no celular">
+
+            <nav>
+
+                <img id="mobile-exit" class="mobile-menu-fecha" src="images/exit.svg" alt="Fecha menu no celular">
+
+                <ul class="primary-nav">
+                    <li class="current"><a href="#">Home</a></li>
+                    <li><a href="#">Recursos</a></li>
+                    <li><a href="#">Preço</a></li>
+                </ul>
+
+                <ul class="secundary-nav">
+                    <li><a href="#">Contato</a></li>
+                    <li class="seja-premio"><a href="#">Seja prémio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <section class="hero">
+        <div class="container">
+            <div class="col-direita">
+                <p class="subhead"> Sou Tico &amp; Teco</p>
+                <h1>Um aplicativo que não existe</h1>
+
+                <div class="hero-cta">
+                    <a href="#" class="primary-cta">Esperimente grátis</a>
+                    <a href="#" class="watch-video-cta">
+                        <img src="images/watch.svg" alt="Assista o vídeo">Assista o vídeo
+                    </a>
+                </div>
+            </div>
+
+            <img src="images/illustration.svg" class="hero-img" alt="ilustração do aplicativo">
+
+        </div>
+    </section>
+
+    <section class="secao-recursos">
+        <div class="container">
+            <ul class="lista-recursos">
+                <li>Tarefas ilimitadas</li>
+                <li>Lembretes de tarefas por SMS</li>
+                <li>Explosões de confete após a conclusão de tarefas</li>
+                <li>Anúncios em Mídias Sociais</li>
+                <li>Colaboração em tempo real</li>
+                <li>Outros recursos incríveis</li>
+            </ul>
+
+            <img src="images/kellice-chua-0qb-3cYYtGo-unsplash.jpg" alt="Mulher segurando um celular">
+
+        </div>
+    </section>
+
+    <section class="sessao-depoimento">
+        <div class="container">
+
+            <ul>
+                <li>
+                    <img src="images/person_1.jpeg" alt="Pessoa">
+                    <blockquote>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis ad sapiente autem suscipit veniam accusantium maxime non sunt mollitia!</blockquote>
+                    <cite>Alan Rodrigues</cite>
+                </li>
+                <li>
+                    <img src="images/person_3.jpeg" alt="Pessoa">
+                    <blockquote>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis ad sapiente autem suscipit veniam accusantium maxime non sunt mollitia!</blockquote>
+                    <cite>– Alan Rodrigues</cite>
+                </li>
+                <li>
+                    <img src="images/person_4.jpeg" alt="Pessoa">
+                    <blockquote>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis ad sapiente autem suscipit veniam accusantium maxime non sunt mollitia!</blockquote>
+                    <cite>– Alan Rodrigues</cite>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="sessao-contato">
+        <div class="container">
+            <div class="contato-direita">
+                <h2>Contato</h2>
+
+                <form action="">
+                    <label for="name">Nome</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome">
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Digite seu email">
+
+                    <label for="message">Mensagem</label>
+                    <textarea name="mensagem" id="mensagem" rows="10" placeholder="Escreva a sua mensagem aqui..."></textarea>
+
+                    <input type="submit" class="enviar-mensagem" value="Envie sua mensagem">
+                </form>
+            </div>
+
+            <div class="contato-esquerda">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7072.557246897312!2d-48.549412267667485!3d-27.584890182842813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95273816b92d1303%3A0x8e51529bcc5674b1!2sBeiramar%20Shopping!5e0!3m2!1spt-BR!2sbr!4v1623451264851!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <script>
+
+const mobileBtn = document.getElementById('mobile-cta')
+              nav = document.querySelector('nav')
+              mobileBtnExit = document.getElementById('mobile-exit');
+
+        mobileBtn.addEventListener('click', () => {
+            nav.classList.add('menu-btn');
+        })
+
+        mobileBtnExit.addEventListener('click', () => {
+            nav.classList.remove('menu-btn');
+        })
+
+
+
+    </script>
+    
+</body>
+</html>
